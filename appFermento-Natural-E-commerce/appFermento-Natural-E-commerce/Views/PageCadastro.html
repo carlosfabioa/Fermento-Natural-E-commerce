@@ -1,0 +1,26 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="YourNamespace.Register" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Registro</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Label ID="NomeLabel" runat="server" Text="Nome:"></asp:Label>
+            <asp:TextBox ID="Nome" runat="server"></asp:TextBox>
+            <asp:Label ID="EmailLabel" runat="server" Text="E-mail:"></asp:Label>
+            <asp:TextBox ID="Email" runat="server"></asp:TextBox>
+            <asp:Label ID="SenhaLabel" runat="server" Text="Senha:"></asp:Label>
+            <asp:TextBox ID="Senha" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:Label ID="EndereçoLabel" runat="server" Text="Endereço:"></asp:Label>
+            <asp:TextBox ID="Endereço" runat="server"></asp:TextBox>
+            <asp:Label ID="CelularLabel" runat="server" Text="Telefone:"></asp:Label>
+            <asp:TextBox ID="Celular" runat="server"></asp:TextBox>
+            <asp:Button ID="SubmitButton" runat="server" Text="Enviar" OnClick="SubmitButton_Click" />
+        </div>
+    </form>
+</body>
+</html>
