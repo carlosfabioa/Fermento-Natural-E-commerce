@@ -1,0 +1,19 @@
+﻿/* Estilo para a página de login */
+.form-card {
+    width: 300px;
+    margin: auto;
+    background-image: linear-gradient(163deg, #02f1db 0%, #0071e8 100%);
+    border-radius: 25px;
+    transition: all .3s;
+}
+
+/* Efeito de hover para a caixa de login */
+.form-card-2:hover {
+    transform: scale(0.99);
+    border-radius: 25px;
+}
+
+/* Estilize os campos de entrada, botões, etc. conforme necessário */
+/* ... */
+
+/* Defina outras classes e estilos conforme sua preferência */
