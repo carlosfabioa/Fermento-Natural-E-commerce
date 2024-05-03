@@ -1,0 +1,18 @@
+﻿@page
+@model appFermento_Natural_E_commerce.Models.Pao    
+
+<h2>Vitrine de Produtos</h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <h3>@Html.DisplayFor(modelItem => item.tipo)</h3>
+            <p>@Html.DisplayFor(modelItem => item.tipoFermentacao)</p>
+            <p>@Html.DisplayFor(modelItem => item.fornada)</p>
+            <p><strong>Preço:</strong> @Html.DisplayFor(modelItem => item.preco)</p>
+            <p><a class="btn btn-primary" href="@Url.Action("Detalhes", "Produtos", new { id = item.id })">Ver Detalhes</a></p>
+        </div>
+    }
+</div>
+}
