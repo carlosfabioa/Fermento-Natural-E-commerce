@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cGfXok3Z0sGx2r3D3LJ1ZBiG6Pn5coO1JkU5gLeFVJe6lO7FB+Q1FS8mobOwqU+oCfdhJM2AJTFp/w7Th3BdfA==",
+  "dgSpecHash": "5cgVFBQ1BbE4lEB8tz+mhJt/w2V5SU3xYQ64YkJHhvmaHOJ0fHXS+8Z3KVYFVFgWoHjq+B4Ewk9XsLaXd/WbWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aluno\\Desktop\\repo\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
+  "projectFilePath": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aluno\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
