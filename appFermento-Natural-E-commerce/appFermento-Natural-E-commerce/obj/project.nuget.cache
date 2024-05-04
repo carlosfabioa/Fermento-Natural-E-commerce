@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2ujAYaPAKlbaxfgv+P/10XkceV0fmDMT+7NHH1qhB1/vT+yKJr6kSedF3mXZG3V4W+fstD+sQUxGls9vV5KeTQ==",
+  "dgSpecHash": "D910Ci35mm4eBzke+zBjmra+nHm7q7I3uSCa5a4mrOUJQXWlgJ/k0giWLjeOc9wTdeAkPpAGl8C7gjaLXx3hwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aluno\\Desktop\\Atividade\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
+  "projectFilePath": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aluno\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Aluno\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

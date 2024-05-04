@@ -9,7 +9,9 @@ using appFermento_Natural_E_commerce.Data;
 using appFermento_Natural_E_commerce.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.CodeAnalysis.Elfie.Diagnostics;
-using MySqlConnector;
+using Microsoft.EntityFrameworkCore;
+using BCrypt.Net;
+
 
 namespace appFermento_Natural_E_commerce.Controllers
 {
@@ -71,21 +73,38 @@ namespace appFermento_Natural_E_commerce.Controllers
         [HttpPost]
         public async Task<IActionResult>Logar(string email, string senha)
         {
-            MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;database=Padaria;uid=root;");
-            await mySqlConnection.OpenAsync();
-            MySqlCommand mySqlCommand = mySqlConnection.CreateCommand();
-            mySqlCommand.CommandText = $"SELECT * FROM usuarios WHERE email= '{email}' AND senha='{senha}'";
-            
-            MySqlDataReader reader = mySqlCommand.ExecuteReader();
+            string teste = BCrypt.Net.BCrypt.HashPassword("123"); //paramos aqui, pois não conseguimos deixar um hash fixo para uma senha especifica
 
-            
-            if (await reader.ReadAsync())
+            string sql = "SELECT * FROM dbo.Usuario WHERE email='"+email+ "' AND senha='"+senha+"'";
+
+            SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=appFermento_Natural_E_commerceContext-b6d53c56-6d67-40e2-8a9b-e4863a5350ee;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            if(con.State == System.Data.ConnectionState.Open)
             {
-                return Json(new { Msg = "Usuario logado com sucesso!"});
+                con.Close();
             }
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            //if (dr.Read())
+            //{
+            //    string senhaHash = dr["senha"].ToString();
+            //    if (BCrypt.Net.BCrypt.Verify(senha1, senhaHash))
+            //    {
+            //        // A senha fornecida corresponde ao hash armazenado
+            //        // Autenticação bem-sucedida
+            //        return Json(new { Msg = "Usuário logado com sucesso!" });
+            //    }
+            //    else
+            //    {
+            //        return Json(new { Msg = "Senha incorreta" });
+            //    }
+            //}
 
-                
-            return Json(new { Msg= "Usuario nao encontrado! Verifique suas credenciais."});
+
+            //return Json(new { Msg= "Usuario nao encontrado! Verifique suas credenciais."});
+            //return Json(new { Msg =  senha});
+            return Json(new { Msg = teste });
+
         }
 
 
@@ -104,6 +123,8 @@ namespace appFermento_Natural_E_commerce.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Criptografa a senha antes de armazená-la no banco de dados
+                usuarioModel.senha = BCrypt.Net.BCrypt.HashPassword(usuarioModel.senha);
                 _context.Add(usuarioModel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

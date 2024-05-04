@@ -46,6 +46,19 @@
           }
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -3938,6 +3951,37 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "sha512": "W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.0.3.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net20/BCrypt.Net-Next.dll",
+        "lib/net20/BCrypt.Net-Next.xml",
+        "lib/net35/BCrypt.Net-Next.dll",
+        "lib/net35/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt.Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt.Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt.Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/net5.0/BCrypt.Net-Next.dll",
+        "lib/net5.0/BCrypt.Net-Next.xml",
+        "lib/net6.0/BCrypt.Net-Next.dll",
+        "lib/net6.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt.Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt.Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
       ]
     },
     "Humanizer/2.14.1": {
@@ -11331,6 +11375,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "BCrypt.Net-Next >= 4.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.18",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.18",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.12",
@@ -11344,11 +11389,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\Atividade\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
       "projectName": "appFermento-Natural-E-commerce",
-      "projectPath": "C:\\Users\\Aluno\\Desktop\\Atividade\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
+      "projectPath": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Desktop\\Atividade\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\obj\\",
+      "outputPath": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11382,6 +11427,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "BCrypt.Net-Next": {
+            "target": "Package",
+            "version": "[4.0.3, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[7.0.18, )"
