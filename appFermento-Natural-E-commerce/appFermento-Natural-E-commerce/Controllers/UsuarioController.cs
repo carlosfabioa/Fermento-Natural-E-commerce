@@ -78,7 +78,7 @@ namespace appFermento_Natural_E_commerce.Controllers
             string sql = "SELECT * FROM dbo.Usuario WHERE email='"+email+ "' AND senha='"+senha+"'";
 
             SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=appFermento_Natural_E_commerceContext-b6d53c56-6d67-40e2-8a9b-e4863a5350ee;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
-            if(con.State == System.Data.ConnectionState.Open)
+            if (con.State == System.Data.ConnectionState.Open)
             {
                 con.Close();
             }
