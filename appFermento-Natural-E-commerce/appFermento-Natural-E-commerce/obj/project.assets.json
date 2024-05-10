@@ -11389,11 +11389,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\Padaria\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
       "projectName": "appFermento-Natural-E-commerce",
-      "projectPath": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
+      "projectPath": "C:\\Users\\Aluno\\Desktop\\Padaria\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\obj\\",
+      "outputPath": "C:\\Users\\Aluno\\Desktop\\Padaria\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

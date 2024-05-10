@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using appFermento_Natural_E_commerce.Helper;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace appFermento_Natural_E_commerce.Models
@@ -14,6 +15,11 @@ namespace appFermento_Natural_E_commerce.Models
         public string email { get; set; }
         [MaxLength(100)]
         public string senha { get; set; }
+
+        public void SetSenhaHash()
+        {
+            senha = senha.GerarHash();
+        }
 
     }
 }
