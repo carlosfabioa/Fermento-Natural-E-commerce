@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using appFermento_Natural_E_commerce.Data;
 
@@ -10,9 +11,11 @@ using appFermento_Natural_E_commerce.Data;
 namespace appFermento_Natural_E_commerce.Migrations
 {
     [DbContext(typeof(appFermento_Natural_E_commerceContext))]
-    partial class appFermento_Natural_E_commerceContextModelSnapshot : ModelSnapshot
+    [Migration("20240510230150_novopao")]
+    partial class novopao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

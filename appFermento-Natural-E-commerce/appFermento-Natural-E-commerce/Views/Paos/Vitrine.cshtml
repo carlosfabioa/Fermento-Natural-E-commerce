@@ -1,19 +1,39 @@
 ﻿@model IEnumerable<appFermento_Natural_E_commerce.Models.Pao>
+
 @{
     ViewData["Title"] = "Vitrine";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Vitrine de Produtos</h2>
 
-<div class="row">
+<h2>Nossos Produtos</h2>
+
+<p>
+    @using (Html.BeginForm("Index", "Pao", FormMethod.Get))
+    {
+        <input type="text" name="SearchString" value="@ViewBag.CurrentFilter" />
+        <input type="submit" value="Pesquisar" />
+    }
+</p>
+
+<div class="container">
     @foreach (var item in Model)
     {
-        <div class="col-md-4">
-            <h3>@Html.DisplayFor(modelItem => item.tipo)</h3>
-            <p>@Html.DisplayFor(modelItem => item.tipoFermentacao)</p>
-            <p>@Html.DisplayFor(modelItem => item.fornada)</p>
-            <p><strong>Preço:</strong> @Html.DisplayFor(modelItem => item.preco)</p>
-            <p><a class="btn btn-primary" href="@Url.Action("Detalhes", "Produtos", new { id = item.id })">Ver Detalhes</a></p>
+        <div class="card mb-3" style="background-color: #f8f9fa;">
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h3 class="card-title">@Html.DisplayFor(modelItem => item.tipo)</h3>
+                        <p class="card-text"><strong>Tipo de Fermentação:</strong> @Html.DisplayFor(modelItem => item.tipoFermentacao)</p>
+                        <p class="card-text"><strong>Fornada:</strong> @Html.DisplayFor(modelItem => item.fornada)</p>
+                        <p class="card-text"><strong>Preço:</strong> @Html.DisplayFor(modelItem => item.preco)</p>
+                    </div>
+                </div>
+            </div>
         </div>
     }
 </div>
+@section Scripts {
+    <script src="~/js/vitrine.js"></script>
 }
+
+

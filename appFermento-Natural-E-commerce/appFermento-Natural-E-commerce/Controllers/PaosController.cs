@@ -19,23 +19,18 @@ namespace appFermento_Natural_E_commerce.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Vitrine(int? id)
+        public async Task<IActionResult> Vitrine()
         {
-            if (id == null || _context.Pao == null)
-            {
-                return NotFound();
-            }
+            var pao = await _context.Pao.ToListAsync();
 
-            var pao = await _context.Pao
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (pao == null)
+            if (pao == null || !pao.Any())
             {
                 return NotFound();
             }
 
             return View(pao);
         }
-
+        
         // GET: Paos
         public async Task<IActionResult> Index()
         {

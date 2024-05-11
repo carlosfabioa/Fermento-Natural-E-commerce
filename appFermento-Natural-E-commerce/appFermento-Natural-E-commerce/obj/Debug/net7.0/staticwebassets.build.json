@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cPdX4rAH4OcIyG/o3eQGCanUGORYNcZM7HWDFrpugok=",
+  "Hash": "+wvdmSgiTCG9golQmMcNHDe5BJdf5eW817aG4wOJdgY=",
   "Source": "appFermento-Natural-E-commerce",
   "BasePath": "_content/appFermento-Natural-E-commerce",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\wwwroot\\js\\Vitrine.js",
+      "SourceId": "appFermento-Natural-E-commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\wwwroot\\",
+      "BasePath": "_content/appFermento-Natural-E-commerce",
+      "RelativePath": "js/Vitrine.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Vitrine.js"
     },
     {
       "Identity": "C:\\Users\\Aluno\\Source\\Repos\\Fermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\appFermento-Natural-E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
