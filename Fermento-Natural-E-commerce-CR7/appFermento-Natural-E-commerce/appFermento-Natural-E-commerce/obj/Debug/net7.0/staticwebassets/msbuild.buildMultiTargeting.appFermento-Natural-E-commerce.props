@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\appFermento-Natural-E-commerce.props" />
-</Project>

@@ -1,0 +1,116 @@
+﻿@model appFermento_Natural_E_commerce.Models.Usuario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="senha" class="control-label"></label>
+                <div class="input-group">
+                    <input asp-for="senha" class="form-control" id="senhaInput" type="password" />
+                    <span toggle="#senhaInput" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                </div>
+                <span asp-validation-for="senha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="endereço" class="control-label"></label>
+                <input asp-for="endereço" class="form-control" />
+                <span asp-validation-for="endereço" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="celular" class="control-label"></label>
+                <input asp-for="celular" class="form-control" />
+                <span asp-validation-for="celular" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+            var emailValidation = document.getElementById('emailValidation');
+            var senhaValidation = document.getElementById('senhaValidation');
+            var isValid = true;
+
+            // Validar o formato do email
+            if (!isValidEmail(email)) {
+                emailValidation.textContent = 'Por favor, insira um email válido.';
+                isValid = false;
+            } else {
+                emailValidation.textContent = '';
+            }
+
+            // Validar a força da senha (pelo menos 8 caracteres e incluir letras e números)
+            if (!isValidPassword(senha)) {
+                senhaValidation.textContent = 'A senha deve ter pelo menos 8 caracteres e incluir letras e números.';
+                isValid = false;
+            } else {
+                senhaValidation.textContent = '';
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Impede o envio do formulário se houver erros de validação
+            }
+        });
+
+        function isValidEmail(email) {
+            var atIndex = email.indexOf(String.fromCharCode(64));
+            if (atIndex < 1 || atIndex === email.length - 1) {
+                return false;
+            }
+            var localPart = email.slice(0, atIndex);
+            var domainPart = email.slice(atIndex + 1);
+
+            var dotIndex = domainPart.indexOf('.');
+            if (dotIndex < 1 || dotIndex === domainPart.length - 1) {
+                return false;
+            }
+
+            if (/\s/.test(localPart) || /\s/.test(domainPart)) {
+                return false;
+            }
+
+            return true;
+        }
+
+        $(".toggle-password").click(function () {
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+
+    </script>
+}
